@@ -1,7 +1,16 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  
+  images: {
+    
+    remotePatterns: [
+      {
+        protocol: 'https', // السماح فقط بروابط HTTPS (لتجنب الصور غير الآمنة)
+        hostname: '**', // السماح بأي نطاق أو دومين
+      },
+    ],
+  },
 };
 
 export default nextConfig;
