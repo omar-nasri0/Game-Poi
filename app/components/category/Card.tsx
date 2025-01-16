@@ -9,7 +9,7 @@ function Card({games}:{games:TypeGame[]}) {
         {games.map((val , i )=>(
             <div className="w-[220px] h-[400px]  relative flex flex-col" key={i}>
         <div className="relative w-full h-full group overflow-hidden rounded-2xl">
-        <div className="absolute top-2 left-2 z-50"><Add gameId={val.id} gameImageUrl={val.background_image} gameName={val.name}/></div>
+        <div className="absolute top-2 left-2 z-50"><Add  gameId={val.id} gameImageUrl={val.background_image} gameName={val.name}/></div>
             <img 
                 src={val.background_image} 
                 alt="game image" 

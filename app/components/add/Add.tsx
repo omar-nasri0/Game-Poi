@@ -9,10 +9,10 @@ interface AddProps {
   gameId: number
   gameName: string
   gameImageUrl: string
-  onRefresh: () => void
+  onRefresh?: () => void
 }
 
-function Add({ gameId, gameName, gameImageUrl, onRefresh }: AddProps) {
+function Add({ gameId, gameName, gameImageUrl,  onRefresh = () => {} }: AddProps) {
   const [isPlus, setIsPlus] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const route = useRouter()
